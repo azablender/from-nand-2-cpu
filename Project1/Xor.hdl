@@ -1,0 +1,13 @@
+/* Building XOR from Nand */
+
+CHIP Xor{
+    IN a,b;
+    OUT out;
+
+    PARTS:
+    Nand(a=a,b=b,out=d);
+    Nand(a=a,b=d,out=e);
+    Nand(a=b,b=d,out=f);
+    Nand(a=e,b=f,out=out);
+
+}

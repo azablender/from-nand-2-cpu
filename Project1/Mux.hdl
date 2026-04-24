@@ -1,0 +1,13 @@
+/* Building MUX from NAND */
+
+CHIP Mux{
+    IN a,b,sel;
+    OUT out;
+
+    PARTS:
+    Not(a=sel, out=notSel);
+    And(a=a, b=notSel, out=x);
+    And(a=b, b=sel, out=y);
+    Or(a=x, b=y, out=out);
+}
+/* Functionality is clear but no idea how the HDL works lmao */

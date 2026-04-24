@@ -1,0 +1,11 @@
+/* Building Or gate from Nand gate */
+
+CHIP Or{
+    IN a,b;
+    OUT out;
+
+    PARTS:
+    Not(a=a,out=notA);
+    Not(a=b,out=notB);
+    Nand(a=notA,b=notB,out=out);
+}

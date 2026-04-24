@@ -1,0 +1,9 @@
+/* Building Not gate from NAND gate */
+
+CHIP Not {
+    IN a;
+    OUT out;
+
+    PARTS:
+    Nand(a =a, b=a , out =out);
+}

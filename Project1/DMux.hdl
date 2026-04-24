@@ -1,0 +1,12 @@
+/* Building DMUX with NAND */
+
+CHIP DMux{
+    IN in , sel;
+    OUT a , b;
+
+    PARTS:
+    Not(a=sel, out=notSel);
+    And(a=in, b=notSel, out=a);
+    And(a=in, b=sel, out=b);
+}
+/* same here the fucntionality is clear but no clue how the HDL connections work
