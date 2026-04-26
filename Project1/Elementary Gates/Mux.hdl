@@ -10,4 +10,4 @@ CHIP Mux{
     And(a=b, b=sel, out=y);
     Or(a=x, b=y, out=out);
 }
-/* Functionality is clear but no idea how the HDL works lmao */
+

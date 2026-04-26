@@ -9,4 +9,3 @@ CHIP DMux{
     And(a=in, b=notSel, out=a);
     And(a=in, b=sel, out=b);
 }
-/* same here the fucntionality is clear but no clue how the HDL connections work
